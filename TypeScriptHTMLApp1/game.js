@@ -87,9 +87,91 @@ var Greeter = (function () {
     return Greeter;
 }());
 window.onload = function () {
-    var el = document.getElementById('content');
-    var greeter = new Greeter();
+    //var el = document.getElementById('content');
+    //var greeter = new Greeter();
     //var game = new Greeter();
     //greeter.start();
 };
-//# sourceMappingURL=app.js.map
+var testclass = (function () {
+    function testclass() {
+    }
+    testclass.prototype.test = function () {
+        alert('test');
+    };
+    return testclass;
+}());
+var StarTravelling;
+(function (StarTravelling) {
+    var WorldState;
+    (function (WorldState) {
+        WorldState[WorldState["Running"] = 1] = "Running";
+        WorldState[WorldState["Paused"] = 2] = "Paused";
+        WorldState[WorldState["InStation"] = 3] = "InStation";
+        WorldState[WorldState["Warping"] = 4] = "Warping";
+    })(WorldState || (WorldState = {}));
+    var World = (function () {
+        function World() {
+        }
+        World.prototype.World = function () {
+        };
+        World.prototype.update = function (deltaTime) {
+        };
+        World.prototype.draw = function (deltaTime) {
+        };
+        return World;
+    }());
+    World.Instance = new World();
+    StarTravelling.World = World;
+})(StarTravelling || (StarTravelling = {}));
+/// <reference path="phaser.d.ts"/>
+var StarTravelling;
+(function (StarTravelling) {
+    var Greeter = (function () {
+        function Greeter() {
+            this.game = new Phaser.Game(800, 600, Phaser.AUTO, 'content', {
+                preload: this.preload, create: this.create, update: this.update, render: this.render
+            });
+        }
+        //加载资源
+        Greeter.prototype.preload = function () {
+            this.game.load.image('logo', '1.png');
+            this.game.load.image('sky', 'assets/sky.png');
+            //this.game.load.spritesheet('baddie', 'assets/baddie.png', 32, 48);
+            //this.game.load.image('diamond', 'assets/diamond.png');
+            //this.game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
+            //this.game.load.image('platform', 'assets/platform.png');
+            //this.game.load.image('star', 'assets/star.png');
+        };
+        Greeter.prototype.create = function () {
+            //var logo = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'logo');
+            var sky = this.game.add.sprite(0, 0, 'sky');
+            //  alert('tye');
+            this.game.physics.startSystem(Phaser.Physics.ARCADE);
+            this.debugText = this.game.add.text(60, 60, "this is text");
+        };
+        Greeter.prototype.update = function (e) {
+            var world = new StarTravelling.World();
+            //console.log(deltaTime);
+            //console.log(this.game.time.elapsed)
+            //world.update(1);
+        };
+        Greeter.prototype.render = function (e) {
+            //alert('test')
+            //   console.log(e);
+            this.debugText.text = this.game.time..toString();
+        };
+        ////tesdt
+        Greeter.prototype.start = function () {
+            // this.timerToken = setInterval(() => this.span.innerHTML = new Date().toUTCString(), 500);
+        };
+        return Greeter;
+    }());
+    window.onload = function () {
+        alert('tes9t');
+        var el = document.getElementById('content');
+        // var greeter = new Greeter();
+        var game = new Greeter();
+        // greeter.start();
+    };
+})(StarTravelling || (StarTravelling = {}));
+//# sourceMappingURL=game.js.map

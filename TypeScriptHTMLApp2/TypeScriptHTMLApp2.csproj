@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2574F603-4B6C-4A30-BFDD-E3BC09EEDFDF}</ProjectGuid>
+    <ProjectGuid>{0A7B83CF-F88D-481D-8534-83D058834E05}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -32,19 +32,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <TypeScriptTarget>ES5</TypeScriptTarget>
-    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
-    <TypeScriptModuleKind />
-    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
-    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
-    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
-    <TypeScriptOutFile>game.js</TypeScriptOutFile>
-    <TypeScriptOutDir />
-    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
-    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
-    <TypeScriptSourceMap>True</TypeScriptSourceMap>
-    <TypeScriptMapRoot />
-    <TypeScriptSourceRoot />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -69,72 +56,31 @@
     <TypeScriptSourceRoot />
   </PropertyGroup>
   <ItemGroup>
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="app.css" />
-    <Content Include="assets\baddie.png" />
-    <Content Include="assets\diamond.png" />
-    <Content Include="assets\dude.png" />
-    <Content Include="assets\firstaid.png" />
-    <Content Include="assets\platform.png" />
-    <Content Include="assets\Ship\battleShip.png" />
-    <Content Include="assets\Ship\battleShip2.png" />
-    <Content Include="assets\Ship\battleShip2Effect.png" />
-    <Content Include="assets\Ship\battleShipEffect.png" />
-    <Content Include="assets\Ship\cruiser.png" />
-    <Content Include="assets\Ship\cruiser2.png" />
-    <Content Include="assets\Ship\cruiser2Effect.png" />
-    <Content Include="assets\Ship\cruiserEffect.png" />
-    <Content Include="assets\Ship\destroyer.png" />
-    <Content Include="assets\Ship\destroyer2.png" />
-    <Content Include="assets\Ship\destroyer2Effect.png" />
-    <Content Include="assets\Ship\destroyerEffect.png" />
-    <Content Include="assets\Ship\fighter1.png" />
-    <Content Include="assets\Ship\fighter1Effect.png" />
-    <Content Include="assets\Ship\fighter2.png" />
-    <Content Include="assets\Ship\fighter2Effect.png" />
-    <Content Include="assets\Ship\fighterTexture.png" />
-    <Content Include="assets\Ship\frigate.png" />
-    <Content Include="assets\Ship\frigate2.png" />
-    <Content Include="assets\Ship\frigate2Effect.png" />
-    <Content Include="assets\Ship\frigateEffect.png" />
-    <Content Include="assets\Ship\miner1.png" />
-    <Content Include="assets\Ship\miner1Effect.png" />
-    <Content Include="assets\Ship\miner2.png" />
-    <Content Include="assets\Ship\miner2Effect.png" />
-    <Content Include="assets\Ship\miner3.png" />
-    <Content Include="assets\Ship\miner3Effect.png" />
-    <Content Include="assets\Ship\MissileFighter1.png" />
-    <Content Include="assets\Ship\Missilefighter2.png" />
-    <Content Include="assets\Ship\missileFighter2Effect.png" />
-    <Content Include="assets\Ship\missileFighterEffect.png" />
-    <Content Include="assets\sky.png" />
-    <Content Include="assets\star.png" />
-    <Content Include="index.html" />
-    <Content Include="Lib\phaser.min.js" />
-    <Content Include="Web.config" />
-    <Content Include="1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="Lib\greeter.ts" />
-    <TypeScriptCompile Include="Lib\app.ts" />
-    <TypeScriptCompile Include="Lib\p2.d.ts" />
-    <TypeScriptCompile Include="Lib\phaser.d.ts" />
-    <TypeScriptCompile Include="Lib\pixi.d.ts" />
-    <TypeScriptCompile Include="Lib\world.ts" />
-    <TypeScriptCompile Include="Test.ts" />
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.css" />
+    <Content Include="app.js" />
+    <Content Include="Boot.js" />
+    <Content Include="default.htm" />
+    <Content Include="game.js" />
+    <Content Include="MainMenu.js" />
+    <Content Include="phaser.js" />
+    <Content Include="phaser.min.js" />
+    <Content Include="Preloader.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="Boot.ts" />
+    <TypeScriptCompile Include="Game.ts" />
+    <TypeScriptCompile Include="Level1.ts" />
+    <TypeScriptCompile Include="MainMenu.ts" />
+    <TypeScriptCompile Include="phaser.d.ts" />
+    <TypeScriptCompile Include="Player.ts" />
+    <TypeScriptCompile Include="Preloader.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -152,7 +98,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>10202</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:10202/</IISUrl>
+          <IISUrl>http://localhost:54135/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
